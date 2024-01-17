@@ -11,9 +11,9 @@
 - 📊 Outputs results in a readable CSV format.
 
 ## Installation
-Install ssl_explorer using `go get`:
+Install ssl_explorer using `go install`:
 ```
-go get github.com/Chocapikk/ssl_explorer
+GO111MODULE=on go install github.com/Chocapikk/ssl_explorer@latest
 ```
 
 ## Usage
