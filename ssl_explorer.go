@@ -57,6 +57,9 @@ func getCertInfo(url string) (*tls.ConnectionState, error) {
 
 	resp, err := client.Get(url)
 	if err != nil {
+		if resp != nil && resp.TLS != nil {
+			return resp.TLS, nil
+		}
 		return nil, err
 	}
 	defer resp.Body.Close()
